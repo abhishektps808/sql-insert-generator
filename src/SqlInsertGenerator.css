@@ -1,0 +1,192 @@
+
+.sql-tool {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.sql-tool h1 {
+  margin-bottom: 8px;
+}
+
+.sql-tool h2 {
+  font-size: 18px;
+}
+
+.sql-tool > label {
+  display: block;
+  margin: 18px 0 7px;
+  font-weight: 600;
+}
+
+.sql-tool input:not([type="checkbox"]),
+.sql-tool select,
+.sql-tool textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font: 14px Consolas, monospace;
+}
+
+.sql-tool textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.sql-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 16px 0;
+}
+
+.sql-options label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+}
+
+.sql-summary,
+.sql-output-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.sql-summary {
+  justify-content: flex-start;
+  gap: 24px;
+  font-size: 13px;
+  color: #555;
+}
+
+.sql-output-heading button,
+.sql-clear {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 5px;
+  background: #1769aa;
+  color: white;
+  cursor: pointer;
+}
+
+.sql-output-heading button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sql-result {
+  background: #f6f8fa;
+  color: #17212b;
+}
+
+.sql-tool .sql-clear {
+  margin-top: 12px;
+  background: #666;
+}
+
+.sql-note {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .sql-tool {
+    padding: 12px;
+  }
+
+  .sql-options {
+    flex-direction: column;
+  }
+
+  .sql-output-heading {
+    align-items: flex-start;
+  }
+}
+
+.custom-section {
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid #d5dce3;
+  border-radius: 8px;
+  background: #fafbfd;
+}
+
+.custom-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.custom-heading h2 {
+  margin: 0 0 5px;
+}
+
+.custom-heading p,
+.custom-empty {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.custom-heading button,
+.custom-row button {
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background: #1769aa;
+  cursor: pointer;
+}
+
+.custom-row {
+  display: grid;
+  grid-template-columns: 1.2fr 100px 1fr auto;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.sql-tool .custom-row input,
+.sql-tool .custom-row select {
+  min-width: 0;
+  width: 100%;
+}
+
+.custom-row .remove-column {
+  background: #b42318;
+}
+
+.custom-empty {
+  padding: 10px 0;
+}
+
+.sql-error {
+  padding: 10px;
+  color: #b42318;
+  background: #fff0ee;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  .custom-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .custom-row .remove-column {
+    width: fit-content;
+  }
+}
