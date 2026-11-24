@@ -70,10 +70,6 @@ function formatValue(value: string, emptyAsNull: boolean): string {
   if (v === "") return emptyAsNull ? "NULL" : "''";
   if (v.toUpperCase() === "NULL") return "NULL";
 
-  if (/^[+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?$/.test(v)) {
-    return v;
-  }
-
   return `'${v.replace(/'/g, "''")}'`;
 }
 
@@ -242,7 +238,7 @@ export default function SqlInsertGenerator() {
         id="tableName"
         value={table}
         onChange={(e) => setTable(e.target.value)}
-        placeholder="dbo.YourTable"
+        placeholder="YourTable"
       />
 
       <label htmlFor="sourceData">Paste table data</label>
